@@ -2,26 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+main {
+  fon-family: "Lato";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #fff;
+}
+.header {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 56px;
+}
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__item {
+  margin-right: 82px;
+}
+.header__item:last-child {
+  margin-right: 0;
+}
+.header__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  text-decoration: none;
+}
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 0.75;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.intro {
+  height: 100vh;
+  background: url("/img/1.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 263px;
+}
+.intro__title {
+  max-width: 619px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+  margin-bottom: 22px;
+}
+.inro__subtitle {
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 546px;
+  margin-bottom: 59px;
+}
+
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-form {
+  background:transparent url("/img/2.svg") no-repeat left center;
+  background-size: 20px;
 }
